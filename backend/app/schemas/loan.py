@@ -4,9 +4,9 @@ from typing import List
 
 class LoanRequest(BaseModel):
     principal: float = Field(..., gt=0, description="The amount of the loan")
-    annual_rate: int = Field(..., gt=0,
+    annual_rate: float = Field(..., gt=0,
                              description="The term of the loan in months")
-    term_months: float = Field(..., gt=0,
+    term_months: int = Field(..., gt=0,
                                description="The annual interest rate of the loan")
 
 
